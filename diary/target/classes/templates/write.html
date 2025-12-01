@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>일기 쓰기</title>
+</head>
+<body>
+    <h1>오늘의 일기</h1>
+    
+    <form action="/write" method="post">
+        <div>
+            <label>제목: </label>
+            <input type="text" name="title" placeholder="제목을 입력하세요">
+        </div>
+        <br>
+        <div>
+            <textarea name="content" rows="10" cols="50" placeholder="오늘 무슨 일이 있었나요?"></textarea>
+        </div>
+        <br>
+        <button type="submit">저장하기</button>
+    </form>
+    
+    <hr>
+    <a href="/">메인으로 돌아가기</a>
+</body>
+</html>

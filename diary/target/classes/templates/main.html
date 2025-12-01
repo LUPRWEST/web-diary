@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<HTML xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My Cyber Hilights</title>
+</head>
+<body>
+    <h1>다이어리</h1>
+    <p>일상의 하이라이트를 기록하자</p>
+    <hr>
+    <a href="/write">하이라이트 기록하기</a>
+    <hr>
+
+    <div th:each="diary : ${diaryList}">
+        <h3 th:text="${diary.title}">제목이 들어갈 자리</h3>
+        
+        <p th:text="${diary.content}">내용이 들어갈 자리</p>
+        
+        <small th:text="'번호: ' + ${diary.id}">번호</small>
+        <hr>
+    </div>
+
+    <div th:if="${diaryList.isEmpty()}">
+        <p>아직 작성된 일기가 없습니다. 첫 일기를 써보세요!</p>
+    </div>
+
+    
+</body>
+</HTML>
